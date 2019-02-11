@@ -31,11 +31,11 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 a {
   color: inherit;
   text-decoration: none;
-  background: linear-gradient(rgba(0, 0, 0, 0) 65%, #ffd700 0%);
+  background: linear-gradient(rgba(0, 0, 0, 0) 65%, #00be6f 0%);
 }
 
 a:hover {
-  background: linear-gradient(rgba(0, 0, 0, 0) 65%, #ffeb7f 0%);
+  background: linear-gradient(rgba(0, 0, 0, 0) 65%, #30ff7f 0%);
 }
 
 div.logo {
