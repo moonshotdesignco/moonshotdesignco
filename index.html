@@ -14,53 +14,61 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#f6f6f6">
   <link rel="stylesheet" href="style.css" type="text/css">
+  <script src="script.js"></script>
   <title>Moonshot Design Company</title>
 </head>
 <body>
-  <!-- <h1>MOONSHOT DESIGN COMPANY</h1> -->
-  <div class="logo">
-    <img id="logo" src="mdco_linebreak_crescent.svg" alt="Moonshot Design Co.">
-  </div>
-  <br />
-  <div class="content">
-    <div id="about">
-      <h3>About</h3>
-      <p class="copy">Moonshot is a web design company focused on building attractive, responsive, and easy-to-use websites. It was started in 2017 by <a href="https://harrywilsondunaway.com">Harry Dunaway</a>.</p>
+<!-- 
+  <section id="preload">
+    <h1>loading...</h1>
+  </section>
+   -->
+  <section id="load">
+    <!-- <h1>MOONSHOT DESIGN COMPANY</h1> -->
+    <div class="logo">
+      <img id="logo" src="mdco_linebreak_crescent.svg" alt="Moonshot Design Co.">
     </div>
-    <div id="subgrid">
-      <div id="portfolio">
-        <h3>Portfolio</h3>
-        <ul class="list">
-          <li><a href="https://www.bonaventurephotography.com">Bonaventure Photography</a></li>
-          <li><a href="https://officialbrightside.com">Brightside</a></li>
-          <li><a href="https://dillonjordanphotos.com">Dillon Jordan Photos</a></li>
-          <li><a href="https://harrywilsondunaway.com">Harry Wilson Dunaway III</a></li>
-        </ul>
+    <br />
+    <div class="content">
+      <div id="about">
+        <h3>About</h3>
+        <p class="copy">Moonshot is a web design company focused on building attractive, responsive, and easy-to-use websites. It was started in 2017 by <a href="https://harrywilsondunaway.com">Harry Dunaway</a>.</p>
       </div>
-      <div id="social">
-        <h3>Social</h3>
-        <ul class="list row">
-          <li><a href="https://www.facebook.com/moonshotdesignco">Facebook</a></li>
-          <li><a href="https://www.instagram.com/moonshotdesignco">Instagram</a></li>
-          <li><a href="https://www.twitter.com/mnshtdsgnco">Twitter</a></li>
-        </ul>
+      <div id="subgrid">
+        <div id="portfolio">
+          <h3>Portfolio</h3>
+          <ul class="list">
+            <li><a href="https://www.bonaventurephotography.com">Bonaventure Photography</a></li>
+            <li><a href="https://officialbrightside.com">Brightside</a></li>
+            <li><a href="https://dillonjordanphotos.com">Dillon Jordan Photos</a></li>
+            <li><a href="https://harrywilsondunaway.com">Harry Wilson Dunaway III</a></li>
+          </ul>
+        </div>
+        <div id="social">
+          <h3>Social</h3>
+          <ul class="list row">
+            <li><a href="https://www.facebook.com/moonshotdesignco">Facebook</a></li>
+            <li><a href="https://www.instagram.com/moonshotdesignco">Instagram</a></li>
+            <li><a href="https://www.twitter.com/mnshtdsgnco">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="contact">
+        <h3>Contact</h3>
+        <div id="contactform">
+          <p class="subheader">* all fields required</p>
+          <form id="contact" method="POST" action="https://formspree.io/moonshotdesignco@gmail.com">
+            <input type="text" name="firstname" placeholder="First name" required>
+            <input type="text" name="lastname" placeholder="Last name" required>
+            <input type="email" name="email" placeholder="Email address" required>
+            <textarea name="message" placeholder="What can I do for you?" required></textarea>
+            <input type="text" name="_gotcha" style="display:none" />
+            <button type="submit">Send</button>
+          </form>
+        </div>
       </div>
     </div>
-    <div id="contact">
-      <h3>Contact</h3>
-      <div id="contactform">
-        <p class="subheader">* all fields required</p>
-        <form id="contact" method="POST" action="https://formspree.io/moonshotdesignco@gmail.com">
-          <input type="text" name="firstname" placeholder="First name" required>
-          <input type="text" name="lastname" placeholder="Last name" required>
-          <input type="email" name="email" placeholder="Email address" required>
-          <textarea name="message" placeholder="What can I do for you?" required></textarea>
-          <input type="text" name="_gotcha" style="display:none" />
-          <button type="submit">Send</button>
-        </form>
-      </div>
-    </div>
-  </div>
-  <p class="footer">&copy; 2018-2020 Harry Dunaway + Moonshot Design Company</p>
+    <p class="footer">&copy; 2018-2020 Harry Dunaway + Moonshot Design Company</p>
+  </section>
 </body>
 </html>
