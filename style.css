@@ -27,6 +27,7 @@ section#cover {
   width: 100%;
   height: 100%;
   background: black;
+  display: none;
 }
 
 section#preload {
@@ -39,14 +40,11 @@ section#preload {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: black;
-  color: white;
 }
 
 section#load {
   display: none;
 }
-
 
 h1, h2, h3, h4, h5, h6, p, ul, li {
   margin-right: 0.5em;
