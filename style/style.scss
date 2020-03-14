@@ -1,0 +1,164 @@
+@import "reset";
+@import "mdco-sizes";
+@import "mdco-colors";
+@import "mdco-fonts";
+
+html {
+  background: $white;
+}
+
+body {
+  font: {
+    family: $fontstack;
+  }
+  color: $black;
+  margin: 0 1rem;
+  padding: 1rem 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, li {
+  margin: {
+    right: $small-c;
+  }
+  padding: {
+    bottom: $small-c;
+  }
+}
+
+a {
+  color: inherit;
+  text: {
+    decoration: none;
+  }
+  background: linear-gradient(rgba(0, 0, 0, 0) 65%, $yellow 0%);
+}
+
+a:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0) 65%, $orange 0%);
+}
+
+div.logo {
+  width: 100%;
+}
+
+img#logo {
+  width: 100%;
+}
+
+.copy, .list, #contact {
+  margin: {
+    bottom: 1em;
+  }
+}
+
+.list {
+  list: {
+    style: {
+      type: none;
+    }
+  }
+}
+
+.row > li {
+  display: inline-block;
+}
+
+.footer {
+  font: {
+    family: $fontstackmono;
+    style: italic;
+    size: $small-a;
+  }
+}
+
+#contactform {
+  max: {
+    width: 400px;
+  }
+  padding: {
+    bottom: 1rem;
+  }
+}
+
+.subheader {
+  font: {
+    size: $small-a;
+  }
+  color: $red;
+  margin: 0 0 $small-d 0;
+}
+
+form#contact * {
+  font: inherit;
+  border: {
+    radius: $small-e;
+  }
+  border: none;
+}
+
+form#contact input, form#contact textarea {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 $small-b 0;
+  padding: $small-c;
+}
+
+form#contact textarea {
+  resize: vertical;
+  height: 6rem;
+}
+
+form#contact button {
+  font: {
+    size: 1rem;
+    weight: 700;
+  }
+  color: $white;
+  background: $gray;
+  padding: $small-c $big-c;
+}
+
+@media screen and (min-width: 400px) {
+
+  #subgrid {
+    display: grid;
+    grid: {
+      template: {
+        columns: 1fr 1fr;
+      }
+      column: 1;
+    }
+  }
+
+  .row > li {
+    display: inherit;
+  }
+
+}
+
+@media screen and (min-width: 950px) {
+
+  .content {
+    display: grid;
+    grid: {
+      template: {
+        columns: auto 400px;
+        rows: auto;
+      }
+      gap: 1em;
+    }
+    width: 100%;
+    max-width: 1000px;
+    margin: {
+      right: auto;
+    }
+  }
+
+  #contact {
+    grid: {
+      row: 1 / span 2;
+      column: 2;
+    }
+  }  
+
+}
