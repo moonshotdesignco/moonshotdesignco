@@ -16,10 +16,7 @@ body {
   padding: 1rem 0;
 }
 
-h1, h2, h3, h4, h5, h6, p, ul, li {
-  margin: {
-    right: $small-c;
-  }
+h3, p, ul, #contactform {
   padding: {
     bottom: $small-c;
   }
@@ -34,20 +31,31 @@ a {
 }
 
 a:hover {
-  background: linear-gradient(rgba(0, 0, 0, 0) 65%, $orange 0%);
+  background: linear-gradient(rgba(0, 0, 0, 0) 65%, $gray 0%);
 }
 
 div.logo {
   width: 100%;
+  margin: {
+    bottom: 4rem;
+  }
 }
 
 img#logo {
   width: 100%;
 }
 
-.copy, .list, #contact {
+.content {
+  display: grid;
+  grid: {
+    template: {
+      columns: auto;
+      rows: auto;
+    }
+    gap: 2rem;
+  }
   margin: {
-    bottom: 1em;
+    bottom: 4rem;
   }
 }
 
@@ -59,8 +67,19 @@ img#logo {
   }
 }
 
-.row > li {
-  display: inline-block;
+.list li {
+  padding: {
+    bottom: $small-e;
+  }
+}
+
+.list.menu li a {
+  display: block;
+  width: 100%;
+  text: {
+    transform: uppercase;
+    align: center;
+  }
 }
 
 .footer {
@@ -68,15 +87,6 @@ img#logo {
     family: $fontstackmono;
     style: italic;
     size: $small-a;
-  }
-}
-
-#contactform {
-  max: {
-    width: 400px;
-  }
-  padding: {
-    bottom: 1rem;
   }
 }
 
@@ -118,47 +128,44 @@ form#contact button {
   padding: $small-c $big-c;
 }
 
-@media screen and (min-width: 400px) {
+// @media screen and (min-width: 600px) {
 
-  #subgrid {
-    display: grid;
-    grid: {
-      template: {
-        columns: 1fr 1fr;
-      }
-      column: 1;
-    }
-  }
+//   .content {
+//     grid: {
+//       template: {
+//         columns: 1fr 1fr;
+//         rows: auto;
+//       }
+//     }
+//   }
 
-  .row > li {
-    display: inherit;
-  }
+//   div#contact {
+//     grid: {
+//       column: 2;
+//       row: 1 / span 2;
+//     }
+//   }
 
-}
+// }
 
-@media screen and (min-width: 950px) {
+// @media screen and (min-width: 950px) {
 
-  .content {
-    display: grid;
-    grid: {
-      template: {
-        columns: auto 400px;
-        rows: auto;
-      }
-      gap: 1em;
-    }
-    width: 100%;
-    max-width: 1000px;
-    margin: {
-      right: auto;
-    }
-  }
+//   .content {
+//     grid: {
+//       template: {
+//         columns: 1fr 1fr 1fr;
+//       }
+//     }
+//     margin: {
+//       right: auto;
+//     }
+//   }
 
-  #contact {
-    grid: {
-      row: 1 / span 2;
-      column: 2;
-    }
-  }  
+//   #contact {
+//     grid: {
+//       row: 1 / span 2;
+//       column: 3;
+//     }
+//   }  
 
-}
+// }

@@ -18,8 +18,7 @@ body {
   padding: 1rem 0;
 }
 
-h1, h2, h3, h4, h5, h6, p, ul, li {
-  margin-right: 0.5rem;
+h3, p, ul, #contactform {
   padding-bottom: 0.5rem;
 }
 
@@ -31,39 +30,49 @@ a {
 }
 
 a:hover {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(65%, rgba(0, 0, 0, 0)), color-stop(0%, #f69720));
-  background: linear-gradient(rgba(0, 0, 0, 0) 65%, #f69720 0%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(65%, rgba(0, 0, 0, 0)), color-stop(0%, #909090));
+  background: linear-gradient(rgba(0, 0, 0, 0) 65%, #909090 0%);
 }
 
 div.logo {
   width: 100%;
+  margin-bottom: 4rem;
 }
 
 img#logo {
   width: 100%;
 }
 
-.copy, .list, #contact {
-  margin-bottom: 1em;
+.content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  grid-gap: 2rem;
+  margin-bottom: 4rem;
 }
 
 .list {
   list-style-type: none;
 }
 
-.row > li {
-  display: inline-block;
+.list li {
+  padding-bottom: 0.25rem;
+}
+
+.list.menu li a {
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .footer {
   font-family: "IBM Plex Mono", monospace;
   font-style: italic;
   font-size: 0.75rem;
-}
-
-#contactform {
-  max-width: 400px;
-  padding-bottom: 1rem;
 }
 
 .subheader {
@@ -96,40 +105,4 @@ form#contact button {
   color: #f6f6f6;
   background: #909090;
   padding: 0.5rem 1.75rem;
-}
-
-@media screen and (min-width: 400px) {
-  #subgrid {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -ms-grid-column: 1;
-    grid-column: 1;
-  }
-  .row > li {
-    display: inherit;
-  }
-}
-
-@media screen and (min-width: 950px) {
-  .content {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: auto 400px;
-        grid-template-columns: auto 400px;
-    -ms-grid-rows: auto;
-        grid-template-rows: auto;
-    grid-gap: 1em;
-    width: 100%;
-    max-width: 1000px;
-    margin-right: auto;
-  }
-  #contact {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
-    grid-row: 1 / span 2;
-    -ms-grid-column: 2;
-    grid-column: 2;
-  }
 }
