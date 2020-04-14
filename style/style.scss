@@ -27,35 +27,36 @@ a {
   text: {
     decoration: none;
   }
-  background: linear-gradient(rgba(0, 0, 0, 0) 65%, $yellow 0%);
+  background: linear-gradient(rgba(0, 0, 0, 0) 65%, $gray 0%);
 }
 
-a:hover {
-  background: linear-gradient(rgba(0, 0, 0, 0) 65%, $gray 0%);
+a:hover, a:active, a:focus {
+  background: linear-gradient(rgba(0, 0, 0, 0) 65%, $yellow 0%);
 }
 
 div.logo {
   width: 100%;
   margin: {
-    bottom: 4rem;
+    bottom: 1rem;
   }
 }
 
-img#logo {
+div.cres {
+  width: 50%;
+  margin: {
+    left: auto;
+    right: auto;
+    bottom: 25vw;
+  }
+}
+
+img#logo, img#cres {
   width: 100%;
 }
 
 .content {
-  display: grid;
-  grid: {
-    template: {
-      columns: auto;
-      rows: auto;
-    }
-    gap: 2rem;
-  }
   margin: {
-    bottom: 4rem;
+    bottom: 25vw;
   }
 }
 
@@ -64,6 +65,16 @@ img#logo {
     style: {
       type: none;
     }
+  }
+}
+
+.list.menu {
+  display: grid;
+  grid: {
+    template: {
+      columns: auto auto auto;
+    }
+    gap: $small-d;
   }
 }
 
@@ -76,9 +87,14 @@ img#logo {
 .list.menu li a {
   display: block;
   width: 100%;
+  padding: 0.5rem;
   text: {
     transform: uppercase;
     align: center;
+  }
+  background: $lightgray;
+  &:hover, &:active, &:focus {
+    background: $gray;
   }
 }
 
@@ -128,6 +144,18 @@ form#contact button {
   padding: $small-c $big-c;
 }
 
+@media screen and (min-width: 600px) {
+
+  .list.menu {
+    li {
+      a {
+        padding: 1rem;
+      }
+    }
+  }
+
+}
+
 // @media screen and (min-width: 600px) {
 
 //   .content {
@@ -147,6 +175,18 @@ form#contact button {
 //   }
 
 // }
+
+@media screen and (min-width: 950px) {
+
+  .list.menu {
+    li {
+      a {
+        padding: $big-b;
+      }
+    }
+  }
+
+}
 
 // @media screen and (min-width: 950px) {
 
