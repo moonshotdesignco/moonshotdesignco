@@ -22,10 +22,27 @@
     <div class="logo">
       <img id="logo" src="./svg/mdco_br1.svg" alt="Moonshot Design Co.">
     </div>
+    <br />
+    <div class="content">
+      <div id="contact">
+        <h3>Contact</h3>
+        <div id="contactform">
+          <p class="subheader">* all fields required</p>
+          <form id="contact" method="POST" action="https://formspree.io/moonshotdesignco@gmail.com">
+            <input type="text" name="firstname" placeholder="First name" required>
+            <input type="text" name="lastname" placeholder="Last name" required>
+            <input type="email" name="email" placeholder="Email address" required>
+            <textarea name="message" placeholder="What can I do for you?" required></textarea>
+            <input type="text" name="_gotcha" style="display:none" />
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
     <div class="cres">
       <img src="./svg/crescent_construction.svg" alt="Moonshot Design Co." id="cres">
     </div>
-    <p class="footer">&copy; 2018-2020 Harry Dunaway + Moonshot Design Company</p>
+    <p class="footer"><a href="./about.html">About MDCo</a>&nbsp;<a href="./">Home</a><br>&copy; 2018-2020 Harry Dunaway + Moonshot Design Company</p>
   </div>
 </body>
 </html>

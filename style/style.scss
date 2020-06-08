@@ -13,7 +13,7 @@ body {
   }
   color: $black;
   margin: 0 1rem;
-  padding: 1rem 0;
+  padding: 2rem 0 1rem;
 }
 
 h3, p, ul, #contactform {
@@ -34,29 +34,77 @@ a:hover, a:active, a:focus {
   background: linear-gradient(rgba(0, 0, 0, 0) 65%, $yellow 0%);
 }
 
+div#container {
+  display: flex;
+  flex: {
+    direction: column;
+  }
+  min: {
+    height: calc(100vh - 3rem);
+  }
+  justify: {
+    content: space-between;
+  }
+  max: {
+    // width: 900px;
+  }
+  // margin: auto;
+}
+
+div.content {
+  max: {
+    width: 540px;
+  }
+  @media (orientation: landscape) {
+    margin: {
+      left: 2rem;
+    }
+  }
+  padding: {
+    left: 1rem;
+    right: 0;
+  }
+  border: {
+    // left: 2px solid $black_trans;
+    left: {
+      width: 1rem;
+      style: solid;
+      color: $lightpink;
+    }
+  }
+}
+
 div.logo {
   width: 100%;
   margin: {
+    left: auto;
+    right: auto;
     bottom: 1rem;
   }
 }
 
 div.cres {
   width: 50%;
-  margin: {
-    left: auto;
-    right: auto;
-    bottom: 25vw;
-  }
+  padding: 10rem 0;
+  margin: auto;
 }
 
 img#logo, img#cres {
   width: 100%;
 }
 
+img#cres {
+  animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
 .content {
   margin: {
-    bottom: 25vw;
+    bottom: 1rem;
   }
 }
 
@@ -68,33 +116,9 @@ img#logo, img#cres {
   }
 }
 
-.list.menu {
-  display: grid;
-  grid: {
-    template: {
-      columns: auto auto auto;
-    }
-    gap: $small-d;
-  }
-}
-
 .list li {
   padding: {
     bottom: $small-e;
-  }
-}
-
-.list.menu li a {
-  display: block;
-  width: 100%;
-  padding: 0.5rem;
-  text: {
-    transform: uppercase;
-    align: center;
-  }
-  background: $lightgray;
-  &:hover, &:active, &:focus {
-    background: $gray;
   }
 }
 
@@ -103,6 +127,9 @@ img#logo, img#cres {
     family: $fontstackmono;
     style: italic;
     size: $small-a;
+  }
+  text: {
+    align: center;
   }
 }
 
@@ -144,18 +171,6 @@ form#contact button {
   padding: $small-c $big-c;
 }
 
-@media screen and (min-width: 600px) {
-
-  .list.menu {
-    li {
-      a {
-        padding: 1rem;
-      }
-    }
-  }
-
-}
-
 // @media screen and (min-width: 600px) {
 
 //   .content {
@@ -175,18 +190,6 @@ form#contact button {
 //   }
 
 // }
-
-@media screen and (min-width: 950px) {
-
-  .list.menu {
-    li {
-      a {
-        padding: $big-b;
-      }
-    }
-  }
-
-}
 
 // @media screen and (min-width: 950px) {
 
