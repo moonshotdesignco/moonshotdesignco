@@ -1,5 +1,4 @@
 @import "reset";
-@import "mdco-sizes";
 @import "mdco-colors";
 @import "mdco-fonts";
 
@@ -18,7 +17,7 @@ body {
 
 h3, p, ul, #contactform {
   padding: {
-    bottom: $small-c;
+    bottom: 0.5rem;
   }
 }
 
@@ -46,14 +45,14 @@ div#container {
     content: space-between;
   }
   max: {
-    // width: 900px;
+    width: 900px;
   }
-  // margin: auto;
+  margin: auto;
 }
 
 div.content {
   max: {
-    width: 540px;
+    width: 100%;
   }
   @media (orientation: landscape) {
     margin: {
@@ -65,7 +64,6 @@ div.content {
     right: 0;
   }
   border: {
-    // left: 2px solid $black_trans;
     left: {
       width: 1rem;
       style: solid;
@@ -85,7 +83,7 @@ div.logo {
 
 div.cres {
   width: 50%;
-  padding: 10rem 0;
+  // padding: 10rem 0;
   margin: auto;
 }
 
@@ -93,14 +91,14 @@ img#logo, img#cres {
   width: 100%;
 }
 
-img#cres {
-  animation: spin 8s linear infinite;
-}
+// img#cres {
+//   animation: spin 8s linear infinite;
+// }
 
-@keyframes spin {
-  0% {transform: rotate(0deg);}
-  100% {transform: rotate(360deg);}
-}
+// @keyframes spin {
+//   0% {transform: rotate(0deg);}
+//   100% {transform: rotate(360deg);}
+// }
 
 .content {
   margin: {
@@ -118,33 +116,58 @@ img#cres {
 
 .list li {
   padding: {
-    bottom: $small-e;
+    bottom: 0.25rem;
   }
+}
+
+.fold-toggle {
+  cursor: pointer;
+  display: block;
+  margin: 0.5rem 0;
+  padding: 0.25rem 0.5rem;
+  border: none;
+  border-radius: 2px;
+  background: $lightgray;
+  color: initial;
+  font: {
+    size: unset;
+  }
+  &.active {
+    color: $white;
+    background: $black;
+  }
+}
+
+.folded {
+  display: none;
 }
 
 .footer {
   font: {
     family: $fontstackmono;
     style: italic;
-    size: $small-a;
+    size: 0.75rem;
   }
   text: {
     align: center;
+  }
+  margin: {
+    top: 2rem;
   }
 }
 
 .subheader {
   font: {
-    size: $small-a;
+    size: 0.75rem;
   }
   color: $red;
-  margin: 0 0 $small-d 0;
+  margin: 0 0 0.375rem 0;
 }
 
 form#contact * {
   font: inherit;
   border: {
-    radius: $small-e;
+    radius: 0.25rem;
   }
   border: none;
 }
@@ -152,8 +175,8 @@ form#contact * {
 form#contact input, form#contact textarea {
   width: 100%;
   max-width: 100%;
-  margin: 0 0 $small-b 0;
-  padding: $small-c;
+  margin: 0 0 0.625rem 0;
+  padding: 0.5rem;
 }
 
 form#contact textarea {
@@ -168,7 +191,7 @@ form#contact button {
   }
   color: $white;
   background: $gray;
-  padding: $small-c $big-c;
+  padding: 0.5rem 1.5rem;
 }
 
 // @media screen and (min-width: 600px) {

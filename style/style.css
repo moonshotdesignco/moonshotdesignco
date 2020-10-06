@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  font-family: Inter, Helvetica, Arial, sans-serif;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: #202020;
   margin: 0 1rem;
   padding: 2rem 0 1rem;
@@ -46,10 +46,12 @@ div#container {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  max-width: 900px;
+  margin: auto;
 }
 
 div.content {
-  max-width: 540px;
+  max-width: 100%;
   padding-left: 1rem;
   padding-right: 0;
   border-left-width: 1rem;
@@ -72,39 +74,11 @@ div.logo {
 
 div.cres {
   width: 50%;
-  padding: 10rem 0;
   margin: auto;
 }
 
 img#logo, img#cres {
   width: 100%;
-}
-
-img#cres {
-  -webkit-animation: spin 8s linear infinite;
-          animation: spin 8s linear infinite;
-}
-
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
 }
 
 .content {
@@ -119,11 +93,33 @@ img#cres {
   padding-bottom: 0.25rem;
 }
 
+.fold-toggle {
+  cursor: pointer;
+  display: block;
+  margin: 0.5rem 0;
+  padding: 0.25rem 0.5rem;
+  border: none;
+  border-radius: 2px;
+  background: #d6d6d6;
+  color: initial;
+  font-size: unset;
+}
+
+.fold-toggle.active {
+  color: #f6f6f6;
+  background: #202020;
+}
+
+.folded {
+  display: none;
+}
+
 .footer {
-  font-family: "IBM Plex Mono", monospace;
+  font-family: "IBM Plex Mono", Consolas, "Courier New", Courier, monospace;
   font-style: italic;
   font-size: 0.75rem;
   text-align: center;
+  margin-top: 2rem;
 }
 
 .subheader {
@@ -141,7 +137,7 @@ form#contact * {
 form#contact input, form#contact textarea {
   width: 100%;
   max-width: 100%;
-  margin: 0 0 0.65625rem 0;
+  margin: 0 0 0.625rem 0;
   padding: 0.5rem;
 }
 
@@ -155,5 +151,5 @@ form#contact button {
   font-weight: 700;
   color: #f6f6f6;
   background: #909090;
-  padding: 0.5rem 1.75rem;
+  padding: 0.5rem 1.5rem;
 }
